@@ -1,8 +1,20 @@
 import pandas as pd
 import numpy as np
+import os
+import sys
+
+# Get the script's directory
+script_directory = os.path.dirname(os.path.abspath(__file__))
+
+# Set the working directory to the script's directory
+os.chdir(script_directory)
+
+# logs
+sys.stdout = open('data_pipeline_operations_department_01_concat_data.out.log', 'w')
+sys.stderr = open('data_pipeline_operations_department_01_concat_data.err.log', 'w')
 
 #Load data
-df_product = pd.read_excel("../business_department/product_list.xlsx")
+df_product = pd.read_excel("../../../data/business_department/product_list.xlsx")
 print("Successfully loaded product list")
 
 #Sorting
