@@ -28,10 +28,10 @@ print("Succesfuly Dropped rows with Non-Existent User (if any)")
 
 
 # Separating cleaned tables
-df_order_data = df_drop_duplicate_products[['ORDER_ID', 'USER_ID', 'ESTIMATED_ARRIVAL', 'TRANSACTION_DATE']].copy()
-df_order_delays = df_drop_duplicate_products[['ORDER_ID', 'DELAY_IN_DAYS']].copy()
-df_line_item_data_prices = df_drop_duplicate_products[['ORDER_ID', 'PRICE', 'QUANTITY']].copy()
-df_line_item_data_products = df_drop_duplicate_products[['ORDER_ID', 'PRODUCT_NAME', 'PRODUCT_ID']].copy()
+df_order_data = df_corrected_users[['ORDER_ID', 'USER_ID', 'ESTIMATED_ARRIVAL', 'TRANSACTION_DATE']].copy()
+df_order_delays = df_corrected_users[['ORDER_ID', 'DELAY_IN_DAYS']].copy()
+df_line_item_data_prices = df_corrected_users[['ORDER_ID', 'PRICE', 'QUANTITY']].copy()
+df_line_item_data_products = df_corrected_users[['ORDER_ID', 'PRODUCT_NAME', 'PRODUCT_ID']].copy()
 
 df_order_data = df_order_data.drop_duplicates(subset=['ORDER_ID'], keep='first')
 df_order_data.reset_index(drop=True, inplace=True)
@@ -44,6 +44,7 @@ df_order_delays.reset_index(drop=True, inplace=True)
 
 
 # Saving cleaned tables
+df_corrected_users.to_parquet("order_data_merged.parquet")
 df_order_data.to_parquet("order_data.parquet")
 df_order_delays.to_parquet("order_delays.parquet")
 df_line_item_data_prices.to_parquet("line_item_data_prices.parquet")

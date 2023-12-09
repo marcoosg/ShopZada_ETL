@@ -33,6 +33,8 @@ print("Successfully uppercased data")
 df_staff.columns = df_staff.columns.str.upper()
 print("Successfully uppercased columns")
 
+df_staff.to_parquet("staff_data.parquet")
+
 df_staff.rename(columns={
     'STAFF_ID': 'STAFF_ID',
     'NAME': 'STAFF_NAME',
@@ -46,5 +48,5 @@ df_staff.rename(columns={
 }, inplace=True)
 
 #save data
-df_staff.to_parquet("uppercased_data.parquet")
+df_staff.to_parquet("staff_dimension.parquet")
 print("Successfully saved data")

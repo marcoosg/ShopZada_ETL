@@ -34,6 +34,9 @@ appended_df.columns = appended_df.columns.str.upper()
 print("Successfully uppercased columns")
 print(appended_df.info())
 
+appended_df = appended_df.apply(lambda x: x.str.upper() if x.dtype == 'O' else x)
+print(appended_df.head())
+
 #save data
 appended_df.to_parquet("fixed_order_with_merchant.parquet")
 print("Successfully saved data")

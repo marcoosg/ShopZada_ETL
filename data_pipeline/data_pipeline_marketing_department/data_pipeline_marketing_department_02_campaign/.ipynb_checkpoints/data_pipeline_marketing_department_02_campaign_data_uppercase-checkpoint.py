@@ -24,10 +24,13 @@ print("Successfully Loaded the Data")
 ### Uppercase to all column name
 df_campaign_data.columns = df_campaign_data.columns.str.upper()
 
+### Saving data
+df_campaign_data.to_parquet('campaign_data.parquet')
+
 ## Rename DISCOUNT to CAMPAIGN_DISCOUNT
 df_campaign_data.rename(columns={'DISCOUNT': 'CAMPAIGN_DISCOUNT'}, inplace=True)
 
 
 ### Saving data
-df_campaign_data.to_parquet('campaign_data_uppercase.parquet')
+df_campaign_data.to_parquet('campaign_dimension.parquet')
 print("\nSuccessfully Saved the Data!")
