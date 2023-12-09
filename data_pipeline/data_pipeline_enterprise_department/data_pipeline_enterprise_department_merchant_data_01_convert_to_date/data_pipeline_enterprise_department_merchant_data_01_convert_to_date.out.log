@@ -1,0 +1,9 @@
+Successfully loaded data
+   Unnamed: 0    merchant_id  ...                    country  contact_number
+0           0  MERCHANT53971  ...          Brunei Darussalam    661.157.5528
+1           1  MERCHANT56138  ...  Sint Maarten (Dutch part)   (046)415-8092
+2           2  MERCHANT31852  ...                       Mali    939.273.0312
+3           3  MERCHANT63299  ...                       Chad  1-181-438-5899
+4           4  MERCHANT16722  ...                  Guatemala    494-319-8223
+
+[5 rows x 9 columns]

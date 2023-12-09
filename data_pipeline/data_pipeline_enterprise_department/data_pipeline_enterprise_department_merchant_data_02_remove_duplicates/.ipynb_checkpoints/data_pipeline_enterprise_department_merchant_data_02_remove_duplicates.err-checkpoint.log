@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Users/levinjacob/Documents/GitHub/ShopZada_ETL/data_pipeline/data_pipeline_enterprise_department/data_pipeline_enterprise_department_merchant_data_02_remove_duplicates/data_pipeline_enterprise_department_merchant_data_02_remove_duplicates.py", line 28, in <module>
+    print(df_merchant.shape())
+          ^^^^^^^^^^^^^^^^^^^
+TypeError: 'tuple' object is not callable
