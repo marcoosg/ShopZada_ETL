@@ -10,8 +10,8 @@ script_directory = os.path.dirname(os.path.abspath(__file__))
 os.chdir(script_directory)
 
 # logs
-sys.stdout = open('data_pipeline_operations_department_01_concat_data.out.log', 'w')
-sys.stderr = open('data_pipeline_operations_department_01_concat_data.err.log', 'w')
+sys.stdout = open('data_pipeline_01_remove_unnamed.out.log', 'w')
+sys.stderr = open('data_pipeline_01_remove_unnamed.err.log', 'w')
 
 #Load data
 df_product = pd.read_excel("../../../data/business_department/product_list.xlsx")
