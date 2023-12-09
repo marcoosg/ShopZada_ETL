@@ -2,11 +2,8 @@ import pandas as pd
 import numpy as np
 
 #Load data
-df_product = pd.read_excel("../business_department/product_list.xlsx")
+df_product = pd.read_parquet("../business_department/product_unnamed_removed.parquet")
 print("Successfully loaded product list")
-
-#Sorting
-df_product = df_product.loc[:, ~df_product.columns.str.contains('^Unnamed')]
 
 #combine readymade breakfast, lunch and dinner as readymade_food
 df_product.loc[df_product['product_type'] == 'readymade_breakfast', 'product_type'] = 'ready-made food'
