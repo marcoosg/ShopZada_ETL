@@ -25,6 +25,35 @@ df_corrected_users = df_drop_duplicate_products.copy()
 df_corrected_users.drop(df_drop_duplicate_products[~df_drop_duplicate_products['USER_ID'].isin(df_user_list['USER_ID'])].index, inplace=True)
 print("Succesfuly Dropped rows with Non-Existent User (if any)")
 
+
+
+# Separating cleaned tables
+df_order_data = df_drop_duplicate_products[['ORDER_ID', 'USER_ID', 'ESTIMATED_ARRIVAL', 'TRANSACTION_DATE']].copy()
+df_order_delays = df_drop_duplicate_products[['ORDER_ID', 'DELAY_IN_DAYS']].copy()
+df_line_item_data_prices = df_drop_duplicate_products[['ORDER_ID', 'PRICE', 'QUANTITY']].copy()
+df_line_item_data_products = df_drop_duplicate_products[['ORDER_ID', 'PRODUCT_NAME', 'PRODUCT_ID']].copy()
+
+df_order_data = df_order_data.drop_duplicates(subset=['ORDER_ID'], keep='first')
+df_order_data.reset_index(drop=True, inplace=True)
+
+df_order_delays = df_order_delays.drop_duplicates(subset=['ORDER_ID'], keep='first')
+# Delete rows where 'DELAY_IN_DAYS' is 0
+df_order_delays = df_order_delays[df_order_delays['DELAY_IN_DAYS'] != 0]
+df_order_delays.reset_index(drop=True, inplace=True)
+
+
+
+# Saving cleaned tables
+df_order_data.to_parquet("order_data.parquet")
+df_order_delays.to_parquet("order_delays.parquet")
+df_line_item_data_prices.to_parquet("line_item_data_prices.parquet")
+df_line_item_data_products.to_parquet("line_item_data_products.parquet")
+print("Succesfully Saved order_data")
+
+
+
+
+
 # Create Order Dimension
 # Drop unnecessary columns from df_transactional_campaign
 df_transactional_campaign_filtered = df_transactional_campaign.drop(['TRANSACTION_DATE', 'ESTIMATED_ARRIVAL'], axis=1)
@@ -59,7 +88,7 @@ order_dimension = order_dimension.rename(columns={
 print("Succesfuly Created orderDimension")
 
 ## Saving data
-order_dimension.to_parquet("data_pipeline_operations_department_09_corrected_users.parquet")
-print("Succesfully Saved Data")
+order_dimension.to_parquet("order_dimension.parquet")
+print("Succesfully Saved orderDimension")
 
 

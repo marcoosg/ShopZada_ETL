@@ -13,7 +13,7 @@ os.chdir(script_directory)
 sys.stdout = open('data_pipeline_marketing_department_02_campaign_data_uppercase.out.log', 'w')
 sys.stderr = open('data_pipeline_marketing_department_02_campaign_data_uppercase.err.log', 'w')
 # Loading the Data
-df_campaign_data = pd.read_parquet('../data_pipeline_marketing_department_01_campaign/campaign_data_separated.parquet')
+df_campaign_data = pd.read_parquet('../data_pipeline_marketing_department_02_campaign/campaign_data_removed_symbols.parquet')
 print("Successfully Loaded the Data")
 
 ### Making all Uppercase except Campaign_Description
@@ -23,6 +23,10 @@ print("Successfully Loaded the Data")
 
 ### Uppercase to all column name
 df_campaign_data.columns = df_campaign_data.columns.str.upper()
+
+## Rename DISCOUNT to CAMPAIGN_DISCOUNT
+df_campaign_data.rename(columns={'DISCOUNT': 'CAMPAIGN_DISCOUNT'}, inplace=True)
+
 
 ### Saving data
 df_campaign_data.to_parquet('campaign_data_uppercase.parquet')

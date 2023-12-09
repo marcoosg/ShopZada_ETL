@@ -32,6 +32,19 @@ print("Successfully uppercased data")
 df_merchant.columns = df_merchant.columns.str.upper()
 print("Successfully uppercased columns")
 
+# Rename columns in df_merchant
+df_merchant.rename(columns={
+    'MERCHANT_ID': 'MERCHANT_ID',
+    'CREATION_DATE': 'MERCHANT_CREATION_DATE',
+    'NAME': 'MERCHANT_NAME',
+    'STREET': 'MERCHANT_STREET',
+    'STATE': 'MERCHANT_STATE',
+    'CITY': 'MERCHANT_CITY',
+    'COUNTRY': 'MERCHANT_COUNTRY',
+    'CONTACT_NUMBER': 'MERCHANT_CONTACT_NO'
+}, inplace=True)
+print("Successfully created merchantDimension")
+
 #save data
 df_merchant.to_parquet("fixed_merchant_data.parquet")
 print("Successfully saved data")
