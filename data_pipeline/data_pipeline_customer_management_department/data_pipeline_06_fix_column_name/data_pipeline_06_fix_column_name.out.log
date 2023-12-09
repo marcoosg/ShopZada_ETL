@@ -1,0 +1,11 @@
+Successfully loaded data
+Successfully fixed column names
+     USER_ID         USER_NAME  ...  USER_JOB_TITLE USER_JOB_LVL
+0  USER40678        ZION FEEST  ...      TECHNICIAN     ACCOUNTS
+1  USER08728  KATTIE BERGSTROM  ...      TECHNICIAN    SOLUTIONS
+2  USER29759      AIDEN CORWIN  ...         STUDENT          N/A
+3  USER16806    VINCE GISLASON  ...         STUDENT          N/A
+4  USER27644     ADELE OKUNEVA  ...       ASSOCIATE    USABILITY
+
+[5 rows x 15 columns]
+Successfully saved data
