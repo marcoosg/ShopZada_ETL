@@ -1,0 +1,35 @@
+Successfully loaded the data
+      PRODUCT_ID  ... PRODUCT_PRICE
+0   PRODUCT16794  ...         12.81
+3   PRODUCT52912  ...          5.83
+8   PRODUCT17375  ...          9.92
+9   PRODUCT26612  ...          6.78
+11  PRODUCT50553  ...          7.53
+17  PRODUCT06101  ...         10.95
+22  PRODUCT45809  ...          6.82
+24  PRODUCT07816  ...          8.83
+26  PRODUCT10771  ...         11.60
+29  PRODUCT47927  ...         13.87
+32  PRODUCT34734  ...         13.33
+33  PRODUCT57150  ...         11.69
+35  PRODUCT20183  ...         15.41
+38  PRODUCT45363  ...         14.25
+41  PRODUCT18058  ...          8.87
+42  PRODUCT29464  ...         11.94
+45  PRODUCT58979  ...         10.80
+49  PRODUCT25962  ...          6.01
+50  PRODUCT10695  ...         10.61
+51  PRODUCT36392  ...          6.80
+53  PRODUCT14085  ...          8.01
+54  PRODUCT36847  ...         12.29
+57  PRODUCT08253  ...          9.39
+60  PRODUCT52456  ...         10.15
+61  PRODUCT30026  ...          8.87
+64  PRODUCT40035  ...         15.29
+66  PRODUCT60217  ...          5.89
+68  PRODUCT27057  ...          8.44
+70  PRODUCT31756  ...          5.73
+75  PRODUCT58777  ...          7.29
+
+[30 rows x 4 columns]
+Successfully saved data
