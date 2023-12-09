@@ -1,0 +1,30 @@
+Successfully loaded data
+        USER_ID           USER_NAME  ...  USER_JOB_TITLE    USER_JOB_LVL
+3179  USER37291       PATRICIA FUNK  ...      CONSULTANT         PROGRAM
+3180  USER29272          ABBEY TORP  ...    ORCHESTRATOR  IMPLEMENTATION
+3181  USER16313          KIANA TORP  ...        DESIGNER        IDENTITY
+3182  USER19096       TRUDIE REMPEL  ...           AGENT         QUALITY
+3183  USER03081  ABIGAYLE ROSENBAUM  ...         STUDENT             N/A
+...         ...                 ...  ...             ...             ...
+4202  USER24134        JOCELYN RYAN  ...     FACILITATOR         QUALITY
+4203  USER26158         OCIE GIBSON  ...         STUDENT             N/A
+4204  USER00781       DAWSON ABBOTT  ...       ASSOCIATE     INTEGRATION
+4205  USER31000         YASMIN BATZ  ...     COORDINATOR         QUALITY
+4206  USER32345    ADOLFO CONSIDINE  ...         STUDENT             N/A
+
+[1000 rows x 15 columns]
+Successfully fixed column order
+        USER_ID USER_CREATION_DATE  ...  USER_CC_NO USER_ISSUING_BANK
+3179  USER37291         2020-12-19  ...  2531184190         CHINABANK
+3180  USER29272         2022-01-27  ...  1764722570          EASTWEST
+3181  USER16313         2020-12-11  ...   711211920          EASTWEST
+3182  USER19096         2023-07-05  ...  1274297744         CHINABANK
+3183  USER03081         2020-05-01  ...   258091580          MAYABANK
+...         ...                ...  ...         ...               ...
+4202  USER24134         2020-10-11  ...  3235423243               BPI
+4203  USER26158         2021-09-01  ...  3143912462         METROBANK
+4204  USER00781         2020-03-05  ...  3674074768               BPI
+4205  USER31000         2021-11-30  ...  2967781976         METROBANK
+4206  USER32345         2022-10-21  ...  1437957810     ROBINSONSBANK
+
+[1000 rows x 15 columns]

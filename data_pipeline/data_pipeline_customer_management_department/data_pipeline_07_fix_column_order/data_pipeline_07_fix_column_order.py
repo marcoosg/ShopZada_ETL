@@ -1,8 +1,20 @@
 import pandas as pd
 import numpy as np
+import os
+import sys
+
+# Get the script's directory
+script_directory = os.path.dirname(os.path.abspath(__file__))
+
+# Set the working directory to the script's directory
+os.chdir(script_directory)
+
+# logs
+sys.stdout = open('data_pipeline_operations_department_01_concat_data.out.log', 'w')
+sys.stderr = open('data_pipeline_operations_department_01_concat_data.err.log', 'w')
 
 #load data
-df_merged_data=pd.read_parquet("fixed_column_name.parquet")
+df_merged_data=pd.read_parquet('../data_pipeline_06_fix_column_name/fixed_column_name.parquet')
 print("Successfully loaded data")
 
 print(df_merged_data.iloc[3000:4000])
