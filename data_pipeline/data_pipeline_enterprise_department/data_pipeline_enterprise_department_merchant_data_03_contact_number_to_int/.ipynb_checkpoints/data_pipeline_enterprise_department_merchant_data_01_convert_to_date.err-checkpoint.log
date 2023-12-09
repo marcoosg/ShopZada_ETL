@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/Users/levinjacob/Documents/GitHub/ShopZada_ETL/data_pipeline/data_pipeline_enterprise_department/data_pipeline_enterprise_department_merchant_data_03_contact_number_to_int/data_pipeline_enterprise_department_merchant_data_03_contact_number_to_int.py", line 20, in <module>
+    df_merchant_list = pd.read_parquet('../data_pipeline_enterprise_department_merchant_data_01_convert_to_date/duplicates_removed.parquet')
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pandas/io/parquet.py", line 670, in read_parquet
+    return impl.read(
+           ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pandas/io/parquet.py", line 265, in read
+    path_or_handle, handles, filesystem = _get_path_or_handle(
+                                          ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pandas/io/parquet.py", line 139, in _get_path_or_handle
+    handles = get_handle(
+              ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pandas/io/common.py", line 872, in get_handle
+    handle = open(handle, ioargs.mode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../data_pipeline_enterprise_department_merchant_data_01_convert_to_date/duplicates_removed.parquet'
