@@ -11,8 +11,8 @@ script_directory = os.path.dirname(os.path.abspath(__file__))
 os.chdir(script_directory)
 
 # logs
-sys.stdout = open('data_pipeline_operations_department_01_concat_data.out.log', 'w')
-sys.stderr = open('data_pipeline_operations_department_01_concat_data.err.log', 'w')
+sys.stdout = open('data_pipeline_01_fix_job_title.out.log', 'w')
+sys.stderr = open('data_pipeline_01_fix_job_title.err.log', 'w')
 
 
 #load data

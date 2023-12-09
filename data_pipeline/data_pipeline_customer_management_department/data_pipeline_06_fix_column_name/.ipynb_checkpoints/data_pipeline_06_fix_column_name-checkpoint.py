@@ -10,8 +10,8 @@ script_directory = os.path.dirname(os.path.abspath(__file__))
 os.chdir(script_directory)
 
 # logs
-sys.stdout = open('data_pipeline_operations_department_01_concat_data.out.log', 'w')
-sys.stderr = open('data_pipeline_operations_department_01_concat_data.err.log', 'w')
+sys.stdout = open('data_pipeline_06_fix_column_name.out.log', 'w')
+sys.stderr = open('data_pipeline_06_fix_column_name.err.log', 'w')
 
 #load data
 df_merged_data=pd.read_parquet('../data_pipeline_05_info_uppercase/uppercased_info.parquet')

@@ -10,8 +10,8 @@ script_directory = os.path.dirname(os.path.abspath(__file__))
 os.chdir(script_directory)
 
 # logs
-sys.stdout = open('data_pipeline_operations_department_01_concat_data.out.log', 'w')
-sys.stderr = open('data_pipeline_operations_department_01_concat_data.err.log', 'w')
+sys.stdout = open('data_pipeline_04_convert_objects_to_date.out.log', 'w')
+sys.stderr = open('data_pipeline_04_convert_objects_to_date.err.log', 'w')
 
 #load data
 df_merged_data=pd.read_parquet('../data_pipeline_03_remove_duplicates/removed_duplicates.parquet')
