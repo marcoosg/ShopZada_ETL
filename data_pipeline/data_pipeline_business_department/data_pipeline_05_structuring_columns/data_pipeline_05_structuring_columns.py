@@ -28,6 +28,5 @@ print(df_product.head(30))
 df_product.columns = df_product.columns.str.upper()
 
 #Saving data
-df_product.to_parquet("product_column_structure.parquet")
-df_product.to_parquet("product_final_list.parquet")
+df_product.to_parquet("product_dimension.parquet")
 print("Successfully saved data")

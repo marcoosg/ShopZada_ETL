@@ -34,4 +34,8 @@ print(df_product.nunique())
 
 #Save data
 df_product.to_parquet("product_type_changes.parquet")
+
+df_product.columns = df_product.columns.str.upper()
+
+df_product.to_parquet("product_list.parquet")
 print("Successfully saved the data")
