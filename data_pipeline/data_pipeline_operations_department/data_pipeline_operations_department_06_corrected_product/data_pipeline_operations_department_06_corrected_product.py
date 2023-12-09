@@ -14,11 +14,14 @@ sys.stdout = open('data_pipeline_operations_department_06_corrected_product.out.
 sys.stderr = open('data_pipeline_operations_department_06_corrected_product.err.log', 'w')
 
 df_converted_data_type = pd.read_parquet('../data_pipeline_operations_department_05_converted_dtype/data_pipeline_operations_department_05_converted_dtype.parquet')
+# get product_list
+df_product_list = pd.read_parquet('../../data_pipeline_business_department/data_pipeline_05_structuring_columns/product_final_list.parquet')
 print("Succesfuly Loaded Data")
 
-# get product_list
-df_product_list = pd.read_parquet('../product_final_list.parquet')
+# Uppercase all column names
 df_product_list.columns = df_product_list.columns.str.upper()
+# Rename column
+df_product_list = df_product_list.rename(columns={'PRODUCT_PRICE':'PRICE'})
 
 # Merge the dataframes on the 'PRODUCT_ID' column
 merged_df = pd.merge(df_converted_data_type, df_product_list[['PRODUCT_ID', 'PRICE', 'PRODUCT_NAME']], on='PRODUCT_ID', how='left', suffixes=('_converted', '_original'))

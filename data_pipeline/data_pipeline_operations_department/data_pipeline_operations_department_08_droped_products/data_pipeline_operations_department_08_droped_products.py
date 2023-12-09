@@ -13,7 +13,9 @@ os.chdir(script_directory)
 sys.stdout = open('data_pipeline_operations_department_08_droped_products.out.log', 'w')
 sys.stderr = open('data_pipeline_operations_department_08_droped_products.err.log', 'w')
 
+# Load data
 df_droped_duplicates = pd.read_parquet('../data_pipeline_operations_department_07_droped_duplicates/data_pipeline_operations_department_07_droped_duplicates.parquet')
+df_transactional_campaign = pd.read_parquet('../../data_pipeline_marketing_department/data_pipeline_marketing_department_03_campaign/transactional_campaign_uppercase.parquet')
 print("Succesfuly Loaded Data")
 
 # Drop Duplicate Product in an Order and keep last

@@ -24,6 +24,8 @@ df_product['product_name'] = df_product['product_name'].str.upper()
 # Uppercase all columns
 df_product.columns = df_product.columns.str.upper()
 print(df_product.head(30))
+# Uppercase all columns
+df_product.columns = df_product.columns.str.upper()
 
 #Saving data
 df_product.to_parquet("product_column_structure.parquet")
