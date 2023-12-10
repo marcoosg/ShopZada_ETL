@@ -13,7 +13,7 @@ os.chdir(script_directory)
 sys.stdout = open('data_pipeline_operations_department_04_uppercased.out.log', 'w')
 sys.stderr = open('data_pipeline_operations_department_04_uppercased.err.log', 'w')
 
-df_uppercased = pd.read_parquet('../data_pipeline_operations_department_03_standardized_quantity/data_pipeline_operations_department_03_standardized_quantity.parquet')
+df_uppercased = pd.read_parquet(os.path.join('..', 'data_pipeline_operations_department_03_standardized_quantity', 'data_pipeline_operations_department_03_standardized_quantity.parquet'))
 print("Succesfuly Loaded Data")
 
 # Add _ to column names with spaces

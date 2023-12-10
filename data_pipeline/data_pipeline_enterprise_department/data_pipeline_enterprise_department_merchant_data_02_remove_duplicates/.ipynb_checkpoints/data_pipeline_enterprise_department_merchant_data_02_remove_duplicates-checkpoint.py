@@ -17,7 +17,7 @@ sys.stdout = open('data_pipeline_enterprise_department_merchant_data_02_remove_d
 sys.stderr = open('data_pipeline_enterprise_department_merchant_data_02_remove_duplicates.err.log', 'w')
 
 #load data
-df_merchant = pd.read_parquet('../data_pipeline_enterprise_department_merchant_data_01_convert_to_date/convert_to_date.parquet')
+df_merchant = pd.read_parquet(os.path.join('..', 'data_pipeline_enterprise_department_merchant_data_01_convert_to_date', 'convert_to_date.parquet'))
 print("Successfully loaded data")
 
 #sort values

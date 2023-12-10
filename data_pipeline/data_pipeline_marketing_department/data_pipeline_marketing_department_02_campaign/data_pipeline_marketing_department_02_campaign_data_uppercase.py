@@ -12,8 +12,9 @@ os.chdir(script_directory)
 # logs
 sys.stdout = open('data_pipeline_marketing_department_02_campaign_data_uppercase.out.log', 'w')
 sys.stderr = open('data_pipeline_marketing_department_02_campaign_data_uppercase.err.log', 'w')
+
 # Loading the Data
-df_campaign_data = pd.read_parquet('../data_pipeline_marketing_department_02_campaign/campaign_data_removed_symbols.parquet')
+df_campaign_data = pd.read_parquet(os.path.join('..', 'data_pipeline_marketing_department_02_campaign', 'campaign_data_removed_symbols.parquet'))
 print("Successfully Loaded the Data")
 
 ### Making all Uppercase except Campaign_Description

@@ -17,9 +17,9 @@ sys.stdout = open('data_pipeline_enterprise_department_order_with_merchant_01_up
 sys.stderr = open('data_pipeline_enterprise_department_order_with_merchant_01_uppercase columns.err.log', 'w')
 
 #load data
-df_data1 = pd.read_parquet('../../../data/enterprise_department/order_with_merchant_data1.parquet')
-df_data2 = pd.read_parquet('../../../data/enterprise_department/order_with_merchant_data2.parquet')
-df_data3 = pd.read_csv('../../../data/enterprise_department/order_with_merchant_data3.csv')
+df_data1 = pd.read_parquet(os.path.join('..', '..','..', 'data', 'enterprise_department', 'order_with_merchant_data1.parquet'))
+df_data2 = pd.read_parquet(os.path.join('..', '..','..', 'data', 'enterprise_department', 'order_with_merchant_data2.parquet'))
+df_data3 = pd.read_csv(os.path.join('..','..', '..', 'data', 'enterprise_department', 'order_with_merchant_data3.csv'))
 print("Successfully loaded data")
 
 #concat data

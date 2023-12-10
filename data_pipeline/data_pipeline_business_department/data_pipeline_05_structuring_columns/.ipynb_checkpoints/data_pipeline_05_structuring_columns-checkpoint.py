@@ -14,7 +14,7 @@ sys.stdout = open('data_pipeline_05_structuring_columns.out.log', 'w')
 sys.stderr = open('data_pipeline_05_structuring_columns.err.log', 'w')
 
 #Load data
-df_product = pd.read_parquet("../data_pipeline_04_type_changing/product_type_changes.parquet")
+df_product = pd.read_parquet(os.path.join('..', 'data_pipeline_04_type_changing', 'product_type_changes.parquet'))
 print("Successfully loaded the data")
 
 #renaming columns

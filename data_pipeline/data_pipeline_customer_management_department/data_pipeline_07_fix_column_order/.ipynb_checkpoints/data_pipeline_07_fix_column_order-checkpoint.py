@@ -14,7 +14,7 @@ sys.stdout = open('data_pipeline_07_fix_column_order.out.log', 'w')
 sys.stderr = open('data_pipeline_07_fix_column_order.err.log', 'w')
 
 #load data
-df_merged_data=pd.read_parquet('../data_pipeline_06_fix_column_name/fixed_column_name.parquet')
+df_merged_data=pd.read_parquet(os.path.join('..', 'data_pipeline_06_fix_column_name', 'fixed_column_name.parquet'))
 print("Successfully loaded data")
 
 print(df_merged_data.iloc[3000:4000])

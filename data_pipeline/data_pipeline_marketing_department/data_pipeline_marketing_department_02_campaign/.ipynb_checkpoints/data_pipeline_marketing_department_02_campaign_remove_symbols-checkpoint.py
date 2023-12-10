@@ -14,7 +14,7 @@ sys.stdout = open('data_pipeline_marketing_department_02_campaign_remove_symbols
 sys.stderr = open('data_pipeline_marketing_department_02_campaign_remove_symbols.err.log', 'w')
 
 # Loading the Data
-df_campaign_data = pd.read_parquet('../data_pipeline_marketing_department_01_campaign/campaign_data_separated.parquet')
+df_campaign_data = pd.read_parquet(os.path.join('..', 'data_pipeline_marketing_department_01_campaign', 'campaign_data_separated.parquet'))
 print("Successfully Loaded the Data")
 
 ### Removing unnecessary symbols

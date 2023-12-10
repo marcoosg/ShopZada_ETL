@@ -14,7 +14,8 @@ sys.stdout = open('data_pipeline_05_info_uppercase.out.log', 'w')
 sys.stderr = open('data_pipeline_05_info_uppercase.err.log', 'w')
 
 #load data
-df_merged_data=pd.read_parquet('../data_pipeline_05_info_uppercase/uppercased_info.parquet')
+df_merged_data=pd.read_parquet(os.path.join('..', 'data_pipeline_04_convert_objects_to_date', 'object_to_date.parquet'))
+
 print("Successfully loaded data")
 
 # upper cased cell

@@ -13,7 +13,7 @@ os.chdir(script_directory)
 sys.stdout = open('data_pipeline_operations_department_03_standardized_quantity.out.log', 'w')
 sys.stderr = open('data_pipeline_operations_department_03_standardized_quantity.err.log', 'w')
 
-df_standardized_quantity = pd.read_parquet('../data_pipeline_operations_department_02_merged_data/data_pipeline_operations_department_02_merged_data.parquet')
+df_standardized_quantity = pd.read_parquet(os.path.join('..', 'data_pipeline_operations_department_02_merged_data', 'data_pipeline_operations_department_02_merged_data.parquet'))
 print("Succesfuly Loaded Data")
 
 df_standardized_quantity['QUANTITY'] = df_standardized_quantity['QUANTITY'].astype(str).str.extract(r'(\d+)', expand=False).astype(float).astype('Int64')

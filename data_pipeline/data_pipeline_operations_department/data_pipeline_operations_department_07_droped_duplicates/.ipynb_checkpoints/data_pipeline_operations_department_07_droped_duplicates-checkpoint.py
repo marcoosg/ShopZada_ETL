@@ -13,7 +13,7 @@ os.chdir(script_directory)
 sys.stdout = open('data_pipeline_operations_department_07_droped_duplicates.out.log', 'w')
 sys.stderr = open('data_pipeline_operations_department_07_droped_duplicates.err.log', 'w')
 
-df_corrected_product = pd.read_parquet('../data_pipeline_operations_department_06_corrected_product/data_pipeline_operations_department_06_corrected_product.parquet')
+df_corrected_product = pd.read_parquet(os.path.join('..', 'data_pipeline_operations_department_06_corrected_product', 'data_pipeline_operations_department_06_corrected_product.parquet'))
 print("Succesfuly Loaded Data")
 
 # Drop duplicates

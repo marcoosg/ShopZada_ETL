@@ -14,7 +14,7 @@ sys.stdout = open('data_pipeline_06_fix_column_name.out.log', 'w')
 sys.stderr = open('data_pipeline_06_fix_column_name.err.log', 'w')
 
 #load data
-df_merged_data=pd.read_parquet('../data_pipeline_05_info_uppercase/uppercased_info.parquet')
+df_merged_data=pd.read_parquet(os.path.join('..', 'data_pipeline_05_info_uppercase', 'uppercased_info.parquet'))
 print("Successfully loaded data")
 
 #renaming columns

@@ -14,10 +14,12 @@ os.chdir(script_directory)
 
 # logs
 sys.stdout = open('data_pipeline_enterprise_department_merchant_data_01_convert_to_date.out.log', 'w')
-sys.stderr = open('data_pipeline_enterprise_department_merchant_data_01_convert_to_date.err.log', 'w')
+sys.stderr = open('data_pipelin ae_enterprise_department_merchant_data_01_convert_to_date.err.log', 'w')
 
 #load data
-df_merchant_list = pd.read_html('../../../data/enterprise_department/merchant_data.html')
+html_data_path = os.path.join('..', '..','..', 'data', 'enterprise_department', 'merchant_data.html')
+df_merchant_list = pd.read_html(html_data_path)
+
 print("Successfully loaded data")
 df_merchant = df_merchant_list[0]
 

@@ -14,7 +14,7 @@ sys.stdout = open('data_pipeline_02_remove_unnamed.out.log', 'w')
 sys.stderr = open('data_pipeline_02_remove_unnamed.err.log', 'w')
 
 #load data
-df_merged_data=pd.read_parquet('../data_pipeline_01_fix_job_title/fixed_job_title.parquet')
+df_merged_data=pd.read_parquet(os.path.join('..', 'data_pipeline_01_fix_job_title', 'fixed_job_title.parquet'))
 print("Successfully loaded data")
 
 #removing unnamed 

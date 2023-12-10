@@ -14,7 +14,7 @@ sys.stdout = open('data_pipeline_marketing_department_01_transactional_campaign_
 sys.stderr = open('data_pipeline_marketing_department_01_transactional_campaign_rename.err.log', 'w')
 
 # Loading the Data
-df_transaction_campaign_data = pd.read_csv('../../../data/marketing_department/transactional_campaign_data.csv')
+df_transaction_campaign_data = pd.read_csv(os.path.join('..', '..', '..', 'data', 'marketing_department', 'transactional_campaign_data.csv'))
 print("Successfully Loaded Transactional Campaign Data")
 
 ### Renaming column estimated arrival

@@ -14,7 +14,7 @@ sys.stdout = open('data_pipeline_04_type_changing.out.log', 'w')
 sys.stderr = open('data_pipeline_04_type_changing.err.log', 'w')
 
 #Load data
-df_product = pd.read_parquet("../data_pipeline_03_removing_duplicates/product_duplicates_removed.parquet")
+df_product = pd.read_parquet(os.path.join('..', 'data_pipeline_03_removing_duplicates', 'product_duplicates_removed.parquet'))
 print("Successfully loaded the data")
 
 df_product[df_product.duplicated(['product_name'], keep=False)]

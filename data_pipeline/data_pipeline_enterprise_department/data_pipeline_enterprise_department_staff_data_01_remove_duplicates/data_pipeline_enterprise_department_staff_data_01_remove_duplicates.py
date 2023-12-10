@@ -17,7 +17,7 @@ sys.stdout = open('data_pipeline_enterprise_department_staff_data_01_remove_dupl
 sys.stderr = open('data_pipeline_enterprise_department_staff_data_01_remove_duplicates.err.log', 'w')
 
 #load data
-df_staff_list = pd.read_html('../../../data/enterprise_department/staff_data.html')
+df_staff_list = pd.read_html(os.path.join('..', '..', '..', 'data', 'enterprise_department', 'staff_data.html'))
 print("Successfully loaded data")
 
 #sorting according to date

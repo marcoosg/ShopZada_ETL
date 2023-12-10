@@ -13,7 +13,7 @@ os.chdir(script_directory)
 sys.stdout = open('data_pipeline_operations_department_05_converted_dtype.out.log', 'w')
 sys.stderr = open('data_pipeline_operations_department_05_converted_dtype.err.log', 'w')
 
-df_converted_data_type = pd.read_parquet('../data_pipeline_operations_department_04_uppercased/data_pipeline_operations_department_04_uppercased.parquet')
+df_converted_data_type = pd.read_parquet(os.path.join('..', 'data_pipeline_operations_department_04_uppercased', 'data_pipeline_operations_department_04_uppercased.parquet'))
 print("Succesfuly Loaded Data")
 
 # Convert TRANSACTION_DATE to datetime format

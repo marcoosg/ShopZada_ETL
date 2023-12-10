@@ -13,10 +13,13 @@ os.chdir(script_directory)
 sys.stdout = open('data_pipeline_operations_department_02_merged_data.out.log', 'w')
 sys.stderr = open('data_pipeline_operations_department_02_merged_data.err.log', 'w')
 
-df_line_item_data_prices_concat = pd.read_parquet('../data_pipeline_operations_department_01_concat_data/line_item_data_prices_concat.parquet')
-df_line_item_data_products_concat = pd.read_parquet('../data_pipeline_operations_department_01_concat_data/line_item_data_products_concat.parquet')
-df_order_data_concat = pd.read_parquet('../data_pipeline_operations_department_01_concat_data/order_data_concat.parquet')
-df_order_delays = pd.read_parquet('../data_pipeline_operations_department_01_concat_data/order_delays.parquet')
+df_line_item_data_prices_concat = pd.read_parquet(os.path.join(script_directory, '..', 'data_pipeline_operations_department_01_concat_data', 'line_item_data_prices_concat.parquet'))
+
+df_line_item_data_products_concat = pd.read_parquet(os.path.join(script_directory, '..', 'data_pipeline_operations_department_01_concat_data', 'line_item_data_products_concat.parquet'))
+
+df_order_data_concat = pd.read_parquet(os.path.join(script_directory, '..', 'data_pipeline_operations_department_01_concat_data', 'order_data_concat.parquet'))
+
+df_order_delays = pd.read_parquet(os.path.join(script_directory, '..', 'data_pipeline_operations_department_01_concat_data', 'order_delays.parquet'))
 print("Succesfuly Loaded Data")
 
 df_merge_orderData_lineProducts = pd.merge(df_order_data_concat, df_line_item_data_products_concat, on='ORDER_ID')

@@ -13,9 +13,10 @@ os.chdir(script_directory)
 sys.stdout = open('data_pipeline_operations_department_06_corrected_product.out.log', 'w')
 sys.stderr = open('data_pipeline_operations_department_06_corrected_product.err.log', 'w')
 
-df_converted_data_type = pd.read_parquet('../data_pipeline_operations_department_05_converted_dtype/data_pipeline_operations_department_05_converted_dtype.parquet')
+df_converted_data_type = pd.read_parquet(os.path.join('..', 'data_pipeline_operations_department_05_converted_dtype', 'data_pipeline_operations_department_05_converted_dtype.parquet'))
 # get product_list
-df_product_list = pd.read_parquet('../../data_pipeline_business_department/data_pipeline_05_structuring_columns/product_final_list.parquet')
+df_product_list = pd.read_parquet(os.path.join('..', '..', 'data_pipeline_business_department', 'data_pipeline_04_type_changing', 'product_list.parquet'))
+
 print("Succesfuly Loaded Data")
 
 # Uppercase all column names

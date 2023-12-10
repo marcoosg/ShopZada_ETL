@@ -14,7 +14,7 @@ sys.stdout = open('data_pipeline_02_merging_product.out.log', 'w')
 sys.stderr = open('data_pipeline_02_merging_product.err.log', 'w')
 
 #Load data
-df_product = pd.read_parquet("../data_pipeline_01_remove_unnamed/product_unnamed_removed.parquet")
+df_product = pd.read_parquet(os.path.join('..', 'data_pipeline_01_remove_unnamed', 'product_unnamed_removed.parquet'))
 print("Successfully loaded product list")
 
 #combine readymade breakfast, lunch and dinner as readymade_food

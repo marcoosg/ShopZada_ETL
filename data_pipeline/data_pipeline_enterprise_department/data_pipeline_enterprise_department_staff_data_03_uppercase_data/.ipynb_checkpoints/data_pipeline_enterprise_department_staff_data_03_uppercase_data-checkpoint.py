@@ -17,7 +17,7 @@ sys.stdout = open('data_pipeline_enterprise_department_staff_data_03_uppercase_d
 sys.stderr = open('data_pipeline_enterprise_department_staff_data_03_uppercase_data.err.log', 'w')
 
 #load data
-df_staff = pd.read_parquet('../data_pipeline_enterprise_department_staff_data_02_contact_number_to_int/contact_number_to_int.parquet')
+df_staff = pd.read_parquet(os.path.join('..', 'data_pipeline_enterprise_department_staff_data_02_contact_number_to_int', 'contact_number_to_int.parquet'))
 print("Successfully loaded data")
 
 #uppercase data

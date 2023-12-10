@@ -17,7 +17,7 @@ sys.stdout = open('data_pipeline_enterprise_department_staff_data_02_contact_num
 sys.stderr = open('data_pipeline_enterprise_department_staff_data_02_contact_number_to_int.err.log', 'w')
 
 #load data
-df_staff = pd.read_parquet('../data_pipeline_enterprise_department_staff_data_01_remove_duplicates/removed_duplicates.parquet')
+df_staff = pd.read_parquet(os.path.join('..', 'data_pipeline_enterprise_department_staff_data_01_remove_duplicates', 'removed_duplicates.parquet'))
 print("Successfully loaded data")
 
 #convert contact number to int

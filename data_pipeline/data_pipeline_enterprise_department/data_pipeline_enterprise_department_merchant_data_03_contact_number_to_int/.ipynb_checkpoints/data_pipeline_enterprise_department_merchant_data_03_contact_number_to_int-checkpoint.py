@@ -17,7 +17,7 @@ sys.stdout = open('data_pipeline_enterprise_department_merchant_data_03_contact_
 sys.stderr = open('data_pipeline_enterprise_department_merchant_data_03_contact_number_to_int.err.log', 'w')
 
 #load data
-df_merchant = pd.read_parquet('../data_pipeline_enterprise_department_merchant_data_02_remove_duplicates/duplicates_removed.parquet')
+df_merchant = pd.read_parquet(os.path.join('..', 'data_pipeline_enterprise_department_merchant_data_02_remove_duplicates', 'duplicates_removed.parquet'))
 print("Successfully loaded data")
 
 #Contact number string to int

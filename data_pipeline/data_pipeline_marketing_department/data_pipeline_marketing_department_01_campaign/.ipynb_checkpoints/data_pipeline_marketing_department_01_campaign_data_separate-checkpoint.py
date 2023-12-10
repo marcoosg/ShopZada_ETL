@@ -14,7 +14,7 @@ sys.stdout = open('data_pipeline_marketing_department_01_campaign_data_separate.
 sys.stderr = open('data_pipeline_marketing_department_01_campaign_data_separate.err.log', 'w')
 
 # Loading the Data
-df_campaign_data = pd.read_csv('../../../data/marketing_department/campaign_data.csv')
+df_campaign_data = pd.read_csv(os.path.join('..', '..', '..', 'data', 'marketing_department', 'campaign_data.csv'))
 print("Successfully Loaded Campaign Data")
 
 ### Separate into different columns
@@ -28,7 +28,7 @@ df_campaign_data[['campaign_description', 'campaign_writer']] = df_campaign_data
 print("Successfully Separated campaign writer")
 
 #Rename discount to campaign discount
-df_campaign_data = df_campaign_data.rename(columns={'discount': 'campaign_discount'})
+# df_campaign_data = df_campaign_data.rename(columns={'discount': 'campaign_discount'})
 
 ### Saving data
 df_campaign_data.to_parquet('campaign_data_separated.parquet')

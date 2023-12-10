@@ -14,7 +14,7 @@ sys.stdout = open('data_pipeline_marketing_department_03_transactional_campaign_
 sys.stderr = open('data_pipeline_marketing_department_03_transactional_campaign_column_uppercase.err.log', 'w')
 
 # Loading the Data
-df_transaction_campaign_data = pd.read_parquet('../data_pipeline_marketing_department_02_campaign/transactional_camapaign_column.parquet')
+df_transaction_campaign_data = pd.read_parquet(os.path.join('..', 'data_pipeline_marketing_department_02_campaign', 'transactional_camapaign_column.parquet'))
 print("Succesfully Loaded the Data")
 
 ### Uppercase to all column name

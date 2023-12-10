@@ -14,7 +14,7 @@ sys.stdout = open('data_pipeline_03_removing_duplicates.out.log', 'w')
 sys.stderr = open('data_pipeline_03_removing_duplicates.err.log', 'w')
 
 #Load data
-df_product = pd.read_parquet("../data_pipeline_02_merging_product/product_type_merged.parquet")
+df_product = pd.read_parquet(os.path.join('..', 'data_pipeline_02_merging_product', 'product_type_merged.parquet'))
 print("Successfully loaded the data")
 
 #removing same product name and product type, keeping only the newly added data

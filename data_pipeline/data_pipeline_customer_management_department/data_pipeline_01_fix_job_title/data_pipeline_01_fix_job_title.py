@@ -16,10 +16,13 @@ sys.stderr = open('data_pipeline_01_fix_job_title.err.log', 'w')
 
 
 #load data
-with open('../../../data/customer_management_department/user_credit_card.pickle', 'rb') as user_cc:
+with open(os.path.join('..', '..', '..', 'data', 'customer_management_department', 'user_credit_card.pickle'), 'rb') as user_cc:
     df_user_credit_card = pickle.load(user_cc)
-df_user_data = pd.read_json("../../../data/customer_management_department/user_data.json")
-df_user_job = pd.read_csv('../../../data/customer_management_department/user_job.csv')
+    
+df_user_data = pd.read_json(os.path.join('..', '..', '..', 'data', 'customer_management_department', 'user_data.json'))
+
+df_user_job = pd.read_csv(os.path.join('..', '..', '..', 'data', 'customer_management_department', 'user_job.csv'))
+
 df_merged_data = df_user_credit_card.merge(df_user_data)
 df_merged_data = df_merged_data.merge(df_user_job)
 print("loaded data successfully")

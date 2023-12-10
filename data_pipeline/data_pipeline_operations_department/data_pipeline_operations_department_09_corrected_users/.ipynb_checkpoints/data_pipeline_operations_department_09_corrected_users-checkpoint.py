@@ -14,8 +14,8 @@ sys.stdout = open('data_pipeline_operations_department_09_corrected_users.out.lo
 sys.stderr = open('data_pipeline_operations_department_09_corrected_users.err.log', 'w')
 
 # Load data
-df_drop_duplicate_products = pd.read_parquet('../data_pipeline_operations_department_08_droped_products/data_pipeline_operations_department_08_droped_products.parquet')
-df_user_list = pd.read_parquet('../../data_pipeline_customer_management_department/data_pipeline_07_fix_column_order/column_order.parquet')
+df_drop_duplicate_products = pd.read_parquet(os.path.join('..', 'data_pipeline_operations_department_08_droped_products', 'data_pipeline_operations_department_08_droped_products.parquet'))
+df_user_list = pd.read_parquet(os.path.join('..', '..', 'data_pipeline_customer_management_department', 'data_pipeline_07_fix_column_order', 'column_order.parquet'))
 
 df_transactional_campaign = pd.read_parquet('../../data_pipeline_marketing_department/data_pipeline_marketing_department_03_campaign/transactional_campaign_uppercase.parquet')
 print("Succesfuly Loaded Data")

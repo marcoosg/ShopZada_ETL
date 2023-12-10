@@ -14,7 +14,7 @@ sys.stdout = open('data_pipeline_marketing_department_02_transactional_campaign_
 sys.stderr = open('data_pipeline_marketing_department_02_transactional_campaign_organize_column.err.log', 'w')
 
 # Loading the Data
-df_transaction_campaign_data = pd.read_parquet('../data_pipeline_marketing_department_01_campaign/transactional_camapaign_renamed.parquet')
+df_transaction_campaign_data = pd.read_parquet(os.path.join('..', 'data_pipeline_marketing_department_01_campaign', 'transactional_camapaign_renamed.parquet'))
 print("Successfully Loaded the Data")
 
 ### Remove unnamed column

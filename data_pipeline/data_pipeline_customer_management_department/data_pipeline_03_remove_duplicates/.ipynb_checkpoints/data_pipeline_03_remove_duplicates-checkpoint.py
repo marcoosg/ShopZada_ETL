@@ -14,8 +14,7 @@ sys.stdout = open('data_pipeline_03_remove_duplicates.out.log', 'w')
 sys.stderr = open('data_pipeline_03_remove_duplicates.err.log', 'w')
 
 #load data
-df_merged_data=pd.read_parquet('../data_pipeline_02_remove_unnamed/removed_unnamed.parquet')
-print("Successfully loaded data")
+df_merged_data=pd.read_parquet(os.path.join('..', 'data_pipeline_02_remove_unnamed', 'removed_unnamed.parquet'))
 
 #removing user id, keeping only the newly added data (there may be some changes with user ids)
 df_merged_data = df_merged_data.drop_duplicates(subset=['user_id'], keep='last')

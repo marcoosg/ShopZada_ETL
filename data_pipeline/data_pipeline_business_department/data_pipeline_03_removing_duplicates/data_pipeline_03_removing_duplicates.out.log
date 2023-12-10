@@ -1,0 +1,9 @@
+Successfully loaded the data
+(645, 4)
+(639, 4)
+product_id      639
+product_name    636
+product_type     16
+price           235
+dtype: int64
+Successfully removed duplicates
